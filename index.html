@@ -44,16 +44,17 @@
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(map);
 
-	 L.esri
+	 var ptLayer = L.esri
         .featureLayer({
           url: "https://services9.arcgis.com/RHVPKKiFTONKtxq3/arcgis/rest/services/USA_Wildfires_v1/FeatureServer/0"
         })
         .addTo(map);
 
- 	L.esri
+ 	var polyLayer = L.esri
         .featureLayer({
           url: "https://services9.arcgis.com/RHVPKKiFTONKtxq3/arcgis/rest/services/USA_Wildfires_v1/FeatureServer/1"
         })
+	.addTo(map)
 </script>
 
 
