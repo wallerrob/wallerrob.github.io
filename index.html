@@ -81,7 +81,7 @@
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(map);
 
-var redIcon = new L.Icon({
+const redIcon = new L.Icon({
   iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
   iconSize: [25, 41],
@@ -127,6 +127,12 @@ legend.onAdd = function(map) {
 
 legend.addTo(map);
 
+/* events */
+
+ function onMapClick(e) {
+                var marker = L.marker(e.latlng).addTo(mymap);
+            }
+            map.on('click', onMapClick);
 	
 </script>
 
