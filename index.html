@@ -94,7 +94,7 @@ var redIcon = new L.Icon({
           url: "https://services9.arcgis.com/RHVPKKiFTONKtxq3/arcgis/rest/services/USA_Wildfires_v1/FeatureServer/0",
 	  pointToLayer: function (geojson, latlng) {
             return L.marker(latlng, {
-              icon: greenIcon
+              icon: redIcon
             });
           }        })
         .addTo(map);
