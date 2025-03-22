@@ -62,7 +62,15 @@
 .legend i.icon {
   background-size: 12px;
   background-color: rgba(255, 255, 255, 1);
-}		
+}	
+
+
+/* cursor */
+
+.leaflet-container.crosshair-cursor-enabled {
+    cursor:crosshair;
+}
+	
 	</style>
 
 	
@@ -133,7 +141,9 @@ legend.addTo(map);
                 var marker = L.marker(e.latlng).addTo(map);
             }
             map.on('click', onMapClick);
-	
+
+
+L.DomUtil.addClass(map._container,'crosshair-cursor-enabled');	
 </script>
 
 
