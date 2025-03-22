@@ -44,14 +44,22 @@
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(map);
 
-	 var ptLayer = L.esri
+	 const ptLayer  = L.esri
         .featureLayer({
           url: "https://services9.arcgis.com/RHVPKKiFTONKtxq3/arcgis/rest/services/USA_Wildfires_v1/FeatureServer/0"
         })
         .addTo(map);
 
- 	var polyLayer = L.esri
-        .featureLayer({
+	ptLayer.bindPopup(function (layer) {
+        return L.Util.template(
+		"<p>Incident:</br>{IncidentName}</p>",
+          layer.feature.properties
+        );
+      });
+	
+
+        const plLayer = L.esri
+	.featureLayer({
           url: "https://services9.arcgis.com/RHVPKKiFTONKtxq3/arcgis/rest/services/USA_Wildfires_v1/FeatureServer/1"
         })
 	.addTo(map)
