@@ -163,8 +163,7 @@ map.on('click', onMapClick);
 }
 
 function addIncidentLatLong(){
-L.DomUtil.addClass(map._container,'crosshair-cursor-enabled');
-map.on('click', onMapClick);
+alert(document.getElementById("lat").value)
 }
 
 //L.DomUtil.removeClass(map._container,'crosshair-cursor-enabled');	
@@ -174,8 +173,10 @@ map.on('click', onMapClick);
 <br/>
 <button class="button" onclick="addIncidentLatLong()">Add Incident - From Lat/Long</button>
 <br/>
-Latitude:<input id="lat" type="text">
+Latitude:<input id="lat" type="text" value="44.656349">
 <br/>
-Longitude:<input id="lon" type="text">
+Longitude:<input id="lon" type="text" value="-102.151201">
 </body>
 </html>
+
+
