@@ -157,8 +157,8 @@ legend.addTo(map);
  }
 
 function onLatLongClick(e) {
-var lat = document.getElementById("lat");
-var lon = document.getElementById("lon");
+var lat = parseFloat(document.getElementById("lat"));
+var lon = parseFloat(document.getElementById("lon"));
 var latlng = new L.latLng(lat, lon);
                 var marker = L.marker(latlng).addTo(map);
 }
