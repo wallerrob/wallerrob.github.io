@@ -70,6 +70,19 @@
 .leaflet-container.crosshair-cursor-enabled {
     cursor:crosshair;
 }
+
+/* button */
+
+.button {
+  background-color: #C0C0C0; /* gray */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 	
 	</style>
 
@@ -155,8 +168,8 @@ map.on('click', onMapClick);
 //L.DomUtil.removeClass(map._container,'crosshair-cursor-enabled');	
 </script>
 
-<button onclick="addIncidentClick()">Add Incident - From Map Click</button>
+<button class="button" onclick="addIncidentClick()">Add Incident - From Map Click</button>
 <br/>
-<button onclick="addIncidentLatLong()">Add Incident - From Lat/Long</button>
+<button class="button" onclick="addIncidentLatLong()">Add Incident - From Lat/Long</button>
 </body>
 </html>
