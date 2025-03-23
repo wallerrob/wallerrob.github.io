@@ -142,7 +142,12 @@ legend.addTo(map);
             }
             
 
-function addIncident(){
+function addIncidentClick(){
+L.DomUtil.addClass(map._container,'crosshair-cursor-enabled');
+map.on('click', onMapClick);
+}
+
+function addIncidentLatLong(){
 L.DomUtil.addClass(map._container,'crosshair-cursor-enabled');
 map.on('click', onMapClick);
 }
@@ -150,6 +155,7 @@ map.on('click', onMapClick);
 //L.DomUtil.removeClass(map._container,'crosshair-cursor-enabled');	
 </script>
 
-<button onclick="addIncident()">Add Incident</button>
+<button onclick="addIncidentClick()">Add Incident - From Map Click</button>
+<button onclick="addIncidentLatLong()">Add Incident - From Map Click</button>
 </body>
 </html>
