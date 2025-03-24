@@ -64,6 +64,28 @@ var stadiumsAAA = {
         "type": "Point",
         "coordinates": [-77.6202676, 43.1583691]	    
     }
+};
+
+var stadiumsAA = {
+    "type": "Feature",
+    "properties": {
+        "popupContent": "FNB Field"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-76.8901077 , 40.2563768] 
+    }
+};	
+
+var stadiumsA = {
+    "type": "Feature",
+    "properties": {
+        "popupContent": "David S. Frawley Stadium"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-75.5643635, 39.7325375] 
+    }
 };	
 
 	const stadiumsMLB_Layer = L.geoJSON(stadiumsMLB, {
@@ -76,6 +98,24 @@ var stadiumsAAA = {
 	}).addTo(map);
 
 	const stadiumsAAA_Layer = L.geoJSON(stadiumsAAA, {
+		pointToLayer(feature, latlng) {
+			//return L.marker(latlng, {icon: baseballIcon});
+			return L.marker(latlng);
+		//},
+		}
+		//onEachFeature
+	}).addTo(map);
+
+	const stadiumsAA_Layer = L.geoJSON(stadiumsAA, {
+		pointToLayer(feature, latlng) {
+			//return L.marker(latlng, {icon: baseballIcon});
+			return L.marker(latlng);
+		//},
+		}
+		//onEachFeature
+	}).addTo(map);
+
+	const stadiumsA_Layer = L.geoJSON(stadiumsA, {
 		pointToLayer(feature, latlng) {
 			//return L.marker(latlng, {icon: baseballIcon});
 			return L.marker(latlng);
