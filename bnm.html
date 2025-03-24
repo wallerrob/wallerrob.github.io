@@ -55,14 +55,32 @@ var stadiumsMLB = {
     }
 };
 
-	const stadiumsMLB_Layer = L.geoJSON(stadiumsMLB, {
+var stadiumsAAA = {
+    "type": "Feature",
+    "properties": {
+        "popupContent": "Innovative Field"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-77.6202676, 43.1583691]	    
+    }
+};	
 
+	const stadiumsMLB_Layer = L.geoJSON(stadiumsMLB, {
 		pointToLayer(feature, latlng) {
 			//return L.marker(latlng, {icon: baseballIcon});
 			return L.marker(latlng);
 		//},
 		}
+		//onEachFeature
+	}).addTo(map);
 
+	const stadiumsAAA_Layer = L.geoJSON(stadiumsAAA, {
+		pointToLayer(feature, latlng) {
+			//return L.marker(latlng, {icon: baseballIcon});
+			return L.marker(latlng);
+		//},
+		}
 		//onEachFeature
 	}).addTo(map);
 
