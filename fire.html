@@ -178,6 +178,7 @@ layerControl.addOverlay(plLayer, 'Perimeters');
  function onMapClick(e) {
                 var marker = L.marker(e.latlng).addTo(map);
 	 	L.DomUtil.removeClass(map._container,'crosshair-cursor-enabled');
+	 	map.off('click', onMapClick);
  }
 
 function onLatLongClick() {
