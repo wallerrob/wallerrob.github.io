@@ -77,7 +77,7 @@ var stadiumsAA = {
     }
 };	
 
-var stadiumsA = {
+var stadiumsHighA = {
     "type": "Feature",
     "properties": {
         "popupContent": "David S. Frawley Stadium"
@@ -85,6 +85,17 @@ var stadiumsA = {
     "geometry": {
         "type": "Point",
         "coordinates": [-75.5643635, 39.7325375] 
+    }
+};	
+
+var stadiumsA = {
+    "type": "Feature",
+    "properties": {
+        "popupContent": "Virginia Credit Union Stadium"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-77.5091038,  38.3184723] 
     }
 };	
 
@@ -107,6 +118,15 @@ var stadiumsA = {
 	}).addTo(map);
 
 	const stadiumsAA_Layer = L.geoJSON(stadiumsAA, {
+		pointToLayer(feature, latlng) {
+			//return L.marker(latlng, {icon: baseballIcon});
+			return L.marker(latlng);
+		//},
+		}
+		//onEachFeature
+	}).addTo(map);
+
+	const stadiumsHighA_Layer = L.geoJSON(stadiumsHighA, {
 		pointToLayer(feature, latlng) {
 			//return L.marker(latlng, {icon: baseballIcon});
 			return L.marker(latlng);
