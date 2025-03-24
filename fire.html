@@ -139,6 +139,10 @@ const redIcon = new L.Icon({
           layer.feature.properties
         );
       });
+
+const overlays = {
+	'Incidents': ptLayer
+};
 	
 
         const plLayer = L.esri
@@ -161,8 +165,7 @@ legend.onAdd = function(map) {
 
 legend.addTo(map);
 
-//const layerControl = L.control.layers(baseLayers, overlays).addTo(map);
-const layerControl = L.control.layers(baseLayers).addTo(map);
+const layerControl = L.control.layers(baseLayers, overlays).addTo(map);
 
 /* events */
 
