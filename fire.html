@@ -194,17 +194,15 @@ L.DomUtil.addClass(map._container,'crosshair-cursor-enabled');
 map.on('click', onMapClick);
 }
 
-function addIncidentLatLong(){
-map.on('click', onLatLongClick());
+//function addIncidentLatLong(){
+//map.on('click', onLatLongClick());
+//}
 
-}
-
-//L.DomUtil.removeClass(map._container,'crosshair-cursor-enabled');	
 </script>
 
 <button class="button" onclick="addIncidentClick()">Add Incident - From Map Click</button>
 <br/>
-<button class="button" onclick="addIncidentLatLong()">Add Incident - From Lat/Long</button>
+<button class="button" onclick="onLatLongClick()">Add Incident - From Lat/Long</button>
 <br/>
 <table>
 	<tr>
