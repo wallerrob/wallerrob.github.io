@@ -137,7 +137,7 @@ const redIcon = new L.Icon({
 
 	ptLayer.bindPopup(function (layer) {
         return L.Util.template(
-		"<p>Name:<b>{IncidentName}</b><br>Category:{IncidentTypeCategory}<br>Unique Fire ID:{UniqueFireIdentifier}<br>Daily Acres:{DailyAcres}<br>% Contained:{PercentContained}<br>IRWIN ID:{IrwinID}</p>",
+		"<p>Name: <b>{IncidentName}</b><br>Category: {IncidentTypeCategory}<br>Unique Fire ID: {UniqueFireIdentifier}<br>Daily Acres: {DailyAcres}<br>% Contained: {PercentContained}<br>IRWIN ID: {IrwinID}</p>",
           layer.feature.properties
         );
       });
@@ -204,9 +204,18 @@ map.on('click', onLatLongClick());
 <br/>
 <button class="button" onclick="addIncidentLatLong()">Add Incident - From Lat/Long</button>
 <br/>
-Latitude:<input id="lat" type="text" value="44.656349">
+<table>
+	<tr>
+		<td>Latitude:</td>
+		<td><input id="lat" type="text" value="44.656349"></td>		
+	</tr>
+	<tr>
+		<td>Longitude:</td>
+		<td><input id="lon" type="text" value="-102.151201"></td>		
+	</tr>
+</table>
+
 <br/>
-Longitude:<input id="lon" type="text" value="-102.151201">
 </body>
 </html>
 
