@@ -137,7 +137,7 @@ const redIcon = new L.Icon({
 
 	ptLayer.bindPopup(function (layer) {
         return L.Util.template(
-		"<p><b>{IncidentName}</b><br/>Category:{IncidentTypeCategory}<br/>Acres:{GISAcres}</br>IRWIN ID:{IRWINID}</p>",
+		"<p><b>{IncidentName}</b><br>Category:{IncidentTypeCategory}<br>Acres:{GISAcres}<br>IRWIN ID:{IRWINID}</p>",
           layer.feature.properties
         );
       });
