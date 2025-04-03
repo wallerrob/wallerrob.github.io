@@ -109,8 +109,12 @@ var stadiumsA = {
 	}).addTo(map);
 
 function onEachFeature(feature, layer) {
-    layer.bindPopup(feature.properties.popupContent);
+    layer.bindPopup(feature.properties.popupContent + '<br><button type="button" onclick="myFunction()>Show Affiliates</button>');
 }
+
+	function myFunction(){
+		alert("test");
+	}
 
 	//function zoomToFeature(e) {
 		//alert("test");
