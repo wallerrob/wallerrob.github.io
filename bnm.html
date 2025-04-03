@@ -108,16 +108,14 @@ var stadiumsA = {
 		onEachFeature
 	}).addTo(map);
 
-	function onEachFeature(feature, layer) {
-		feature.on({		
-			click: zoomToFeature
-		});
-	}
+function onEachFeature(feature, layer) {
+    layer.bindPopup(feature.properties.popupContent);
+}
 
-	function zoomToFeature(e) {
-		alert("test");
+	//function zoomToFeature(e) {
+		//alert("test");
 		//map.fitBounds(e.target.getBounds());
-	}
+	//}
 
 	const stadiumsAAA_Layer = L.geoJSON(stadiumsAAA, {
 		pointToLayer(feature, latlng) {
