@@ -105,8 +105,19 @@ var stadiumsA = {
 			return L.marker(latlng);
 		//},
 		}
-		//onEachFeature
+		onEachFeature
 	}).addTo(map);
+
+	function onEachFeature(feature, layer) {
+		feature.on({		
+			click: zoomToFeature
+		});
+	}
+
+	function zoomToFeature(e) {
+		alert("test");
+		//map.fitBounds(e.target.getBounds());
+	}
 
 	const stadiumsAAA_Layer = L.geoJSON(stadiumsAAA, {
 		pointToLayer(feature, latlng) {
