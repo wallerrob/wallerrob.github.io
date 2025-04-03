@@ -110,7 +110,7 @@ var stadiumsA = {
 
 function onEachFeature(feature, layer) {
     //layer.bindPopup(feature.properties.popupContent + '<br><a href="javascript:myFunction()>Show Affiliates</a>');
-	layer.bindPopup(feature.properties.popupContent + '<br><span><a href="javascript:myFunction('+ "'test1'" +');">Show Affiliates</a></span>');
+	layer.bindPopup(feature.properties.popupContent + '<br><span><a href="javascript:myFunction('+ "' + feature.properties.popupContent + '" +');">Show Affiliates</a></span>');
 }
 
 	function myFunction(str){
