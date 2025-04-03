@@ -109,7 +109,7 @@ var stadiumsA = {
 	}).addTo(map);
 
 function onEachFeature(feature, layer) {
-    layer.bindPopup(feature.properties.popupContent + '<br><button type="button" onclick="myFunction()>Show Affiliates</button>');
+    layer.bindPopup(feature.properties.popupContent + '<br><a href="javascript:myFunction()>Show Affiliates</a>');
 }
 
 	function myFunction(){
